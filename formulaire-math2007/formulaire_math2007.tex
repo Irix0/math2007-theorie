@@ -1,0 +1,199 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[french]{babel}
+
+\newtheorem{prop}{Propriété}[section]
+\newtheorem{definition}{Définition}[section]
+\title{MATH2007}
+\author{louan20 }
+\date{December 2021}
+
+\begin{document}
+
+\begin{center}
+    \huge\fbox{\textbf{MATH2007}} \\
+    \normalfont
+\end{center}
+\part{Formulaire}
+\large
+\section{Dérivées et primitives directes}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{equation*}
+\begin{array}{|l|l|l|}
+  \hline
+  f(x) & Df(x) & F(x) \\
+  \hline\hline
+  C & 0 & Cx \\
+  \hline
+  x & 1 & \frac{x^2}{2} \\
+  \hline
+  x^n & nx^{n-1} & \frac{x^{n+1}}{n+1} \\
+  \hline
+  (x-a)^n & n(x+a)^{n-1} & \frac{(x+a)^{n+1}}{n+1} \\
+  \hline
+  \frac{1}{(x+a)^n} & -\frac{n}{(x+a)^{n+1}} & \\
+  \hline
+  \frac{1}{x+a} & & ln(|x+a|)\\
+  \hline
+  ln(x+a) & \frac{1}{x+a} & \\
+  \hline
+  e^x & e^x & e^x \\
+  \hline
+  sin(x) & cos(x) & -cos(x) \\
+  \hline
+  cos(x) & -sin(x) & sin(x) \\
+  \hline
+  tan(x) & \frac{1}{cos^2(x)} & \\
+  \hline
+  cotg(x) & \frac{-1}{sin^2(x)} & \\
+  \hline
+  arcsin(x) & \frac{1}{\sqrt{1-x^2}} & \\
+  \hline
+  arcos(x) & -\frac{1}{sqrt{1-x^2}} & \\
+  \hline
+  arctan(x) & \frac{1}{1+x^2} & \\
+  \hline
+  arctan(x) & \frac{-1}{1+x^2} & \\
+  \hline
+
+ \end{array}
+\end{equation*}
+ \\
+\pagebreak
+ \section{Calcul vectoriel : notions analytiques}
+ \begin{prop}[Produit scalaire]
+  \begin{equation*}
+    \vec{u} \bullet \vec{v} = u_x.v_x + u_y.v_y
+  \end{equation*}
+  \end{prop}
+
+  \begin{prop}[Projection orthogonale]
+    \begin{equation*}
+      \vec{u'} = \frac{\vec{u} \bullet \vec{v}}{||\vec{v}||^2}\vec{v}
+    \end{equation*}
+  \end{prop}
+
+  \begin{prop}[Produit vectoriel]
+  \item Voici une méthode pour calculer le produit vectoriel :
+    \begin{figure}[!h]
+      \begin{subfigure}[b]{60mm}
+          \includegraphics[scale=0.4]{produit vectoriel/frame_0_delay-1.5s.jpg}
+      \end{subfigure}
+      \begin{subfigure}[b]{60mm}
+          \includegraphics[scale=0.4]{produit vectoriel/frame_1_delay-1.5s.jpg}
+      \end{subfigure}
+      \begin{subfigure}[b]{60mm}
+          \includegraphics[scale=0.4]{produit vectoriel/frame_2_delay-1.5s.jpg}
+      \end{subfigure}
+      \begin{subfigure}[b]{60mm}
+          \includegraphics[scale=0.4]{produit vectoriel/frame_3_delay-1.5s.jpg}
+      \end{subfigure}
+    \end{figure}
+  \end{prop}
+  \pagebreak
+
+  \section{Coniques}
+  \subsection{Ellipses}
+
+  \begin{equation*}
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+  \end{equation*}
+  \smallskip
+  Intersections avec les axes : $(a, 0) ; (0, b)$
+  \subsubsection{$a>b$}
+  L'excentricité $e = \frac{c}{a}$ \\
+  Les foyers F sont $(c,0) ; (-c, 0)$ \\
+  où $c = \sqrt{a^2-b^2}$
+
+  \subsubsection{$a<b$}
+  L'excentricité $e = \frac{c}{b}$ \\
+  Les foyers F sont $(0,c) ; (0, -c)$ \\
+  où $c = \sqrt{b^2 - a^2}$
+
+  \subsection{Hyperboles}
+  \begin{align}
+    \label{hyp:1}
+    \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 \\
+    \label{hyp:2}
+    \frac{y^2}{b^2} - \frac{x^2}{a^2} = 1
+  \end{align}
+  \smallskip
+  Intersection avec l'axe des x : \eqref{hyp:1}$(a, 0)$ ou \eqref{hyp:2} $(0, a)$  \\
+  L'excentricité $e = \eqref{hyp:1}\frac{c}{a}$ ou \eqref{hyp:2}$\frac{c}{b}$\\
+  Les foyers F sont \eqref{hyp:1} $(c,0) ; (-c, 0)$ ou \eqref{hyp:2} $(0,c) ; (0, -c)$ \\
+  où $c = \sqrt{a^2+ b^2}$
+  Les asymptotes sont : $y = \eqref{hyp:1}\pm \frac{b}{a}x$ ou \eqref{hyp:2}$\pm \frac{a}{b}x$\\
+
+  \smallskip
+
+  \subsection{Paraboles}
+  \begin{align}
+    \label{para:1}
+    y = 2px^2 \\
+    \label{para:2}
+    x = 2py^2
+  \end{align}
+  L'excentricité est 1 \\
+  Le foyer est (p/2, 0) pour \eqref{para:1} ou (0, p/2) pour \eqref{para:2}
+
+\part{Théorie}
+\section{Monotonie et extrema}
+\begin{prop}[Monotonie et dérivation]
+Soit f une fonction réelle dérivable sur I = ]a,b[. On a, f est croissant (resp. décroissant) sur I ssi Df est une fonction positive (resp. négative) sur I.\\
+(Si Df l'est strictement sur I, alors f égalemment. (réciproque fausse))
+\end{prop}
+\begin{prop}[Extrema et dérivation]
+  Soit f une fonction dérivable sur I = ]a,b[ et soit $x_0 \in I$.
+  \begin{enumerate}
+    \item Si $x_0$ est un extremum local de f sur I, alors $Df(x_0)$ = 0.
+    \item Lorsque la fonction appartient à $C_2(I)$, pour caractériser un extremum, on peut donner un critère utilisant la valeur
+          de la dérivée seconde :
+          \begin{itemize}
+            \item si $Df(x_0)$ = 0 et $D^2f(x_0) < 0$ alors $x_0$ est un maximum local;
+            \item Si $Df(x_0$) = 0 et $D^2f(x_0) > 0$ alors $x_0$ est un minimum local.
+          \end{itemize}
+  \end{enumerate}
+\end{prop}
+
+\section{Primitivation}
+\begin{definition}
+  Soit f une fonction définie sur un intervalle ouvert I de $\mathbb{R}$. On appelle primitive de f sur I toute fonction dérivable F sur
+  I telle que DF(x) = f(x), $x \in I$
+\end{definition}
+\begin{prop}
+  Une fonction continue sur ]a,b[ admet toujours une primitive sur cet intervalle.
+\end{prop}
+\begin{prop}[Unicité]
+  Soient $F_1 et F_2$ deux primitives de f sur ]a,b[ qui vérifient $F_1(x_0) = r = F_2(x_0)$. Comme la dérivée d'une constante est nulle, il existe $c \in \mathbb{R}$ tel que $F_1(x) = F_2(x) + c$ pour tout $x \in$ ]a,b[
+\end{prop}
+
+\section{Continuité et dérivabilité}
+\begin{definition}[Continuité]
+  $x_0$ est un point de continuité pour f si $\displaystyle{\lim_{x \to x_0}f(x)}$ existe.
+\end{definition}
+
+\begin{definition}[Dérivabilité]
+  f est dérivable en $x_0$ si $\displaystyle{\lim_{x \to x_0}\frac{f(x)-f(x_0)}{x-x_0}}$ existe et est finie.
+\end{definition}
+
+\begin{prop}[Lien entre dérivabilité et continuité]
+  Soit f une fonction dérivable sur ]a,b[, alors f est continue sur ]a,b[.\\
+  \textbf{Preuve}. \\
+  Soit f une fonction dérivable sur I = ]a,b[ et soit $x_0 \in I$. Alors pour tout $x \in I$, $x \neq x_0$, on a
+  \begin{align*}
+    f(x) - f(x_0) &= (x-x_0)\frac{f(x) - f(x_0)}{x-x_0}\\
+    \text{comme} &\displaystyle{\lim_{x \to x_0}} \frac{f(x) - f(x_0)}{x-x_0} = Df(x_0) \\
+    \text{on obtient} &\displaystyle{\lim_{x \to x_0}} f(x) - f(x_0) \\
+    &=\displaystyle{\lim_{x \to x_0}}(x-x_0) \displaystyle{\lim_{x \to x_0}}\frac{f(x) - f(x_0)}{x-x_0} \\
+    &= 0.Df(x_0) = 0
+  \end{align*}
+\end{prop}
+\end{document}
